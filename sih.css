@@ -318,16 +318,6 @@ nav button{
     font-size: 11px;
 }
 
-.Q{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    width: 900;
-    height: 100px;
-    gap: 0px;
-}
-
 .hr1{
     color: rgb(140, 139, 139);
 }
