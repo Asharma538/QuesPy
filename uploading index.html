@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uploading index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="section1">
+        <nav id="nav_upidx">
+            <div>
+                <a href="#homepage"><img src="/Q-removebg-preview.png" class="imgquespy"></a>
+            </div>
+            <div class="namep1">
+                Ques
+            </div>
+            <div class="namep2">
+                Py
+            </div>
+            <div class="navtags">
+                Home
+            </div>
+            <div class="navtags">
+                View
+            </div>
+            <div class="navtags">
+                About us
+            </div>
+        </nav>
+    </section>
+    <section class="section2">
+        <div class="subjectselect">
+            <div class="subjecttxt">
+                <input type="text" placeholder="Select Subject" class="searchsubjectbox">
+            </div>
+        </div>
+        <br>
+        <form method="get" id="uploadingContainerCentraliser">
+            <div class="uploadingContainer">
+                <!-- Topics of the question section -->
+                <span class="uc_title">Topics</span><br>
+                <span>
+                    Be specific such that a student knowing these topics can answer your question
+                </span><br>
+                <input type="text" name="Title_of_question" class="uc_title_input" placeholder="Suggestion:  Assign a title related to the question and topic">
+
+                <!-- Body of Question section-->
+                <span class="uc_title">Body</span><br>
+                <span>
+                    Enter the question that the student will see
+                </span>
+                <textarea name="Body_of_question" class="uc_title_input uc_body_input" placeholder="Enter your full Question here"></textarea>
+                
+                <!-- Uploading image section -->
+                <span class="uc_title uploadingimg">Attatch Image if needed for the Question</span> <br>
+                <input type="file" accept="image/*" name="image_of_quetion" id="image_of_question">
+                <div id="uplimgcontainer"><img class="uploadedimageindiv" alt="If uploaded your image will display here"></div>
+                <script>
+                    const upimg = document.querySelector('#image_of_question');
+                    var imge = "";
+
+                    upimg.addEventListener("change", function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load", ()=>{
+                            imge = reader.result;
+                            document.querySelector(".uploadedimageindiv").src =imge;
+                            
+                        })
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                </script>
+                <div id="submitquesdiv">
+                    <input type="submit" value="   Submit   " id="submitques">
+                </div>
+                
+            </div>
+        </form>
+    </section>
+</body>
+</html>
