@@ -6,8 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="uploading index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@500&display=swap" rel="stylesheet">
+    <script language="javascript" type="text/javascript">
+        function dynamicdropdown(listindex) {
+            switch (listindex) {
+                case "classX":
+                    document.getElementById("status").options[0] = new Option("Select Subject", "");
+                    document.getElementById("status").options[1] = new Option("Maths", "Maths");
+                    document.getElementById("status").options[2] = new Option("Science", "Science");
+                    document.getElementById("status").options[3] = new Option("English", "English");
+                    document.getElementById("status").options[4] = new Option("Social", "Social");
+                    break;
+                case "classXII":
+                    document.getElementById("status").options[0] = new Option("Select Subject", "");
+                    document.getElementById("status").options[1] = new Option("Physics", "Physics");
+                    document.getElementById("status").options[2] = new Option("Chemistry", "Chemistry");
+                    document.getElementById("status").options[3] = new Option("Maths", "Maths");
+                    document.getElementById("status").options[4] = new Option("English", "English");
+                    break;
+            }
+            return true;
+        }
+    </script>
     <title>Document</title>
 </head>
 <body>
@@ -35,8 +56,22 @@
     </section>
     <section class="section2">
         <div class="subjectselect">
-            <div class="subjecttxt">
-                <input type="text" placeholder="Select Subject" class="searchsubjectbox">
+            <div class="category_div" id="category_div">
+                <select id="source" name="source"
+                    onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                    <option value="" class="">Select Class</option>
+                    <option value="classX">Class 10th</option>
+                    <option value="classXII">Class 12th</option>
+                </select>
+            </div>
+            <div class="sub_category_div" id="sub_category_div">
+                <script type="text/javascript" language="JavaScript">
+                    document.write('<select name="status" id="status"><option value="">Select Subject</option></select>')
+                </script>
+                <noscript>
+                    <select id="status" name="status">
+                    </select>
+                </noscript>
             </div>
         </div>
         <br>
@@ -58,22 +93,110 @@
                 
                 <!-- Uploading image section -->
                 <span class="uc_title uploadingimg">Attatch Image if needed for the Question</span> <br>
-                <input type="file" accept="image/*" name="image_of_quetion" id="image_of_question">
-                <div id="uplimgcontainer"><img class="uploadedimageindiv" alt="If uploaded your image will display here"></div>
+                <input type="file" accept="image/*" name="image_of_quetion" id="mainimage_of_question">
+                <div id="uplimgcontainer"><img class="uploadedimageindiv1" alt="If uploaded your image will display here"></div>
                 <script>
-                    const upimg = document.querySelector('#image_of_question');
+                    const upimg = document.querySelector('#mainimage_of_question');
                     var imge = "";
 
                     upimg.addEventListener("change", function(){
                         const reader = new FileReader();
                         reader.addEventListener("load", ()=>{
                             imge = reader.result;
-                            document.querySelector(".uploadedimageindiv").src =imge;
+                            document.querySelector(".uploadedimageindiv1").src =imge;
                             
                         })
                         reader.readAsDataURL(this.files[0]);
                     })
                 </script>
+                <br><br>
+                <div>
+                    <span class="uc_title">Option A</span><br>
+                    <textarea name="Body_of_question" class="uc_title_input opt" placeholder="Enter the 1st option"></textarea>
+                    <span class="uc_title">Option B</span><br>
+                    <textarea name="Body_of_question" class="uc_title_input opt" placeholder="Enter the 2nd option"></textarea>
+                    <span class="uc_title">Option C</span><br>
+                    <textarea name="Body_of_question" class="uc_title_input opt" placeholder="Enter the 3rd option"></textarea>
+                    <span class="uc_title">Option D</span><br>
+                    <textarea name="Body_of_question" class="uc_title_input opt" placeholder="Enter the 4th option"></textarea>
+                </div>
+                <span id="optionsimages">
+                <div class="option_images option1,2">
+                    <div>
+                        &nbsp; Image for option 1 (if needed)<br>
+                        &nbsp;<input type="file" accept="image/*" name="image_of_quetionop1" id="image_of_questionop1">
+                        <div id="uplimgcontaineropi1"><img class="uploadedimageinop1" alt="If uploaded your image will display here"></div>
+                    </div>
+                    <div>
+                        &nbsp; Image for option 2 (if needed)<br>
+                        &nbsp;<input type="file" accept="image/*" name="image_of_quetionop2" id="image_of_questionop2">
+                        <div id="uplimgcontaineropi2"><img class="uploadedimageinop2" alt="If uploaded your image will display here"></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="option_images option3,4">
+                    <div>
+                        &nbsp; Image for option 3 (if needed)<br>
+                        &nbsp;<input type="file" accept="image/*" name="image_of_quetionop3" id="image_of_questionop3">
+                        <div id="uplimgcontaineropi3"><img class="uploadedimageinop3" alt="If uploaded your image will display here"></div>
+                    </div>
+                    <div>
+                        &nbsp; Image for option 4 (if needed)<br>
+                        &nbsp;<input type="file" accept="image/*" name="image_of_quetionop4" id="image_of_questionop4">
+                        <div id="uplimgcontaineropi4"><img class="uploadedimageinop4" alt="If uploaded your image will display here"></div>
+                    </div>
+                </div>
+                </span>
+                <script>
+                    const upimgop1 = document.querySelector('#image_of_questionop1');
+                    const upimgop2 = document.querySelector('#image_of_questionop2');
+                    const upimgop3 = document.querySelector('#image_of_questionop3');
+                    const upimgop4 = document.querySelector('#image_of_questionop4');
+                    var imge1 = "";
+                    var imge2 = "";
+                    var imge3 = "";
+                    var imge4 = "";
+
+                    upimgop1.addEventListener("change", function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load", ()=>{
+                            imge1 = reader.result;
+                            document.querySelector(".uploadedimageinop1").src =imge1;
+                            
+                        })
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                    upimgop2.addEventListener("change", function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load", ()=>{
+                            imge2 = reader.result;
+                            document.querySelector(".uploadedimageinop2").src =imge2;
+                            
+                        })
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                    upimgop3.addEventListener("change", function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load", ()=>{
+                            imge3 = reader.result;
+                            document.querySelector(".uploadedimageinop3").src =imge3;
+                            
+                        })
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                    upimgop4.addEventListener("change", function(){
+                        const reader = new FileReader();
+                        reader.addEventListener("load", ()=>{
+                            imge4 = reader.result;
+                            document.querySelector(".uploadedimageinop4").src =imge4;
+                            
+                        })
+                        reader.readAsDataURL(this.files[0]);
+                    })
+                </script>
+
+                <!-- Submit button for the uploaded question -->
                 <div id="submitquesdiv">
                     <input type="submit" value="   Submit   " id="submitques">
                 </div>
