@@ -164,6 +164,7 @@ nav button{
     height: 100px;
     width: 100%;
     background-color: rgb(209, 209, 209);
+    margin-top: -16px;
 }
 .name1{
     /* padding-left: 1px;
@@ -179,6 +180,7 @@ nav button{
     float: left;
     padding-left: 1px;
     margin-top: 10px;
+    /* margin : 0px; */
     font-family:'Alpha slab one' , cursive;
     color: #39ca74;
     font-size: 45px;
