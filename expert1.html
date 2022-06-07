@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH_login page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sih.css">
+</head>
+<body>
+    <header>
+        <img src="logo1.png" alt="">
+        <h1 class="name">Ques<span class="py">Py</span></h1>
+        <nav>
+            <div class="left">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="left">
+                <a href="uploading index.html">Upload</a>
+            </div>
+            <div class="left">
+                <a href="#">View</a>
+            </div>
+            <div class="left">
+                <a href="#">About Us</a>
+            </div>
+            <div class="right">
+                <a target="_blank" href="sign-up.html"><button class="signup"> Signup</button></a>
+                <button class="login" onclick="toggle()">Login </button>
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        function toggle(){
+        var loginbtn = document.getElementById('popup');
+        loginbtn.classList.toggle('active')
+        }
+    </script>
+    <div class="topic-container">
+        <p class="topic">Topic: 
+            <select name="topic" id="topic" required>
+                <option value="">--select topic--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </p>
+    </div>
+    <div class="expert-body">
+        <div class="ex-body">Body</div>
+        The question to be checked<br>
+        <div id="boxes">
+
+        </div>
+        <!-- <textarea name="Body_of_question" placeholder="Question to be displayed" id="boxes" ></textarea> -->
+        <br>
+        <br>
+        <div class="ex-body-1">Option(A)</div>
+        <div id="box-1"></div>
+        <!-- <textarea name="Body_of_question" placeholder="Option-A" id="box-1"></textarea> -->
+        <br>
+        <br>
+        <div class="ex-body-1">Option(B)</div>
+        <div id="box-1"></div>
+        <br>
+        <br>
+        <div class="ex-body-1">Option(C)</div>
+        <div id="box-1"></div>
+        <br>
+        <br>
+        <div class="ex-body-1">Option(D)</div>
+        <div id="box-1"></div>
+    </div>
+    <br>
+    <div class="difficulty">
+        <p class="difficult">Difficulty level:</p>
+        <p class="radio">
+        <input type="radio" name="gender" required placeholder="easy">Easy<br>
+        <input type="radio" name="gender" required placeholder="easy">Moderately-easy<br>
+        <input type="radio" name="gender" required placeholder="moderate">Moderate<br>
+        <input type="radio" name="gender" required placeholder="difficult" >Moderately-difficult<br>
+        <input type="radio" name="gender" required placeholder="easy">Difficult<br>
+        </p>
+    </div>
+
+    <div class="approve">
+        <button class="reject">Approve </button>
+        <button class="reject">Reject </button>
+    </div>
+    
+</body>
+</html>
