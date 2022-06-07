@@ -339,3 +339,104 @@ nav button{
 .hr1{
     color: rgb(140, 139, 139);
 }
+
+.topic{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: -5px;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(172, 164, 164);
+    padding-top: 10px;
+    color: rgb(43, 3, 89);
+}
+
+#topic{
+    padding-top: 4px;
+    height: 30px;
+    border: 2px solid rgb(3, 3, 119);
+}
+
+.expert-body{
+    height: 580;
+    width: 1200px;
+    margin-left: 150px;
+    background-color: rgb(205, 251, 251);
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 2px solid grey;
+}
+
+.ex-body{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ex-body-1{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ques-body{
+    border: 2px solid black;
+    height: 50px;
+    width: auto;
+}
+
+#boxes{
+    width: 99%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#box-1{
+    width: 99%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.difficulty{
+    height: 210px;
+    width: 1200px;
+    margin-left: 150px;
+    background-color: rgb(89, 183, 114);
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 2px solid grey;
+}
+
+.difficult{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(12, 3, 81);
+}
+
+.radio{
+    font-size: 18px;
+    color: #5b0404;
+}
+
+.approve{
+    height: 60px;
+    width: 1200px;
+    margin-left: 500px;
+    background-color: white;
+    padding-left: 150px;
+    padding-top: 10px;
+    
+}
+.reject{
+    border:1px solid rgb(2, 2, 88);
+    background-color: rgb(71, 161, 194);
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}
