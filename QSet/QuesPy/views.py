@@ -1,7 +1,7 @@
-import re
 from django.shortcuts import render
-from QuesPy.models import Question
-
+from matplotlib.style import context
+from QuesPy.models import Question,file_upload
+from QuesPy.forms import MyFileUploadForm
 def index(request):
     return render(request,'index.html')
 
@@ -19,11 +19,24 @@ def uploadq(request):
         opt2 = request.POST.get('opt2')
         opt3 = request.POST.get('opt3')
         opt4 = request.POST.get('opt4')
-        image_of_quetionop1 = request.POST.get('image_of_quetionop1')
-        image_of_quetionop2 = request.POST.get('image_of_quetionop2')
-        image_of_quetionop3 = request.POST.get('image_of_quetionop3')
-        image_of_quetionop4 = request.POST.get('image_of_quetionop4')
-        question = Question(source = source, status=status,topic=topic,body_q=body_q,image_q=image_q,opt1=opt1,opt2=opt2,opt3=opt3,opt4=opt4,image_of_quetionop1=image_of_quetionop1,image_of_quetionop2=image_of_quetionop2,image_of_quetionop3=image_of_quetionop3,image_of_quetionop4=image_of_quetionop4,)
+        image_op1 = request.POST.get('image_op1')
+        image_op2 = request.POST.get('image_op2')
+        image_op3 = request.POST.get('image_op3')
+        image_op4 = request.POST.get('image_op4')
+
+        c_form = MyFileUploadForm(request.POST,request.FILES)
+        if c_form.is_valid():
+            files1 = c_form.cleaned_data['image_q']
+            files2 = c_form.cleaned_data['image_op1']
+            files3 = c_form.cleaned_data['image_op2']
+            files4 = c_form.cleaned_data['image_op3']
+            files5 = c_form.cleaned_data['image_op4']
+            file_upload(qnfile = files1,op1file = files2,op2file = files3,op3file = files4,op4file = files5).save()
+
+        question = Question(source = source, status=status,topic=topic,body_q=body_q,image_q=image_q,opt1=opt1,opt2=opt2,opt3=opt3,opt4=opt4,image_of_quetionop1=image_op1,image_of_quetionop2=image_op2,image_of_quetionop3=image_op3,image_of_quetionop4=image_op4,)
         if (source!="" or status!=""):
             question.save()
-    return render(request,'uploadq.html')
+    context = {
+        'form': MyFileUploadForm()
+    }
+    return render(request,'uploadq.html',context)

@@ -56,7 +56,7 @@
         </nav>
     </section>
     <section class="section2">
-        <form method="post" id="uploadingContainerCentraliser" action="/uploadq">
+        <form method="POST" id="uploadingContainerCentraliser" action="/uploadq" enctype="multipart/form-data">
             {% csrf_token %}
             <br>
                 <div class="uploadingContainer">
@@ -95,10 +95,10 @@
                     
                     <!-- Uploading image section -->
                     <span class="uc_title uploadingimg">Attatch Image if needed for the Question</span> <br>
-                    <input type="file" accept="image/*" name="image_q" id="mainimage_of_question">
+                    {{form.image_q}}
                     <div id="uplimgcontainer"><img class="uploadedimageindiv1" alt="If uploaded your image will display here"></div>
                     <script>
-                        const upimg = document.querySelector('#mainimage_of_question');
+                        const upimg = document.querySelector('.form-control');
                         var imge = "";
 
                         upimg.addEventListener("change", function(){
@@ -106,7 +106,6 @@
                             reader.addEventListener("load", ()=>{
                                 imge = reader.result;
                                 document.querySelector(".uploadedimageindiv1").src =imge;
-                                
                             })
                             reader.readAsDataURL(this.files[0]);
                         })
@@ -126,12 +125,14 @@
                     <div class="option_images option1,2">
                         <div>
                             &nbsp; Image for option 1 (if needed)<br>
-                            &nbsp;<input type="file" accept="image/*" name="image_of_quetionop1" id="image_of_questionop1">
+                            <!-- &nbsp;<input type="file" accept="image/*" name="image_of_quetionop1" id="image_of_questionop1"> -->
+                            {{form.image_op1}}
                             <div id="uplimgcontaineropi1"><img class="uploadedimageinop1" alt="If uploaded your image will display here"></div>
                         </div>
                         <div>
                             &nbsp; Image for option 2 (if needed)<br>
-                            &nbsp;<input type="file" accept="image/*" name="image_of_quetionop2" id="image_of_questionop2">
+                            <!-- &nbsp;<input type="file" accept="image/*" name="image_of_quetionop2" id="image_of_questionop2"> -->
+                            {{form.image_op2}}
                             <div id="uplimgcontaineropi2"><img class="uploadedimageinop2" alt="If uploaded your image will display here"></div>
                         </div>
                     </div>
@@ -140,21 +141,23 @@
                     <div class="option_images option3,4">
                         <div>
                             &nbsp; Image for option 3 (if needed)<br>
-                            &nbsp;<input type="file" accept="image/*" name="image_of_quetionop3" id="image_of_questionop3">
+                            <!-- &nbsp;<input type="file" accept="image/*" name="image_of_quetionop3" id="image_of_questionop3"> -->
+                            {{form.image_op3}}
                             <div id="uplimgcontaineropi3"><img class="uploadedimageinop3" alt="If uploaded your image will display here"></div>
                         </div>
                         <div>
                             &nbsp; Image for option 4 (if needed)<br>
-                            &nbsp;<input type="file" accept="image/*" name="image_of_quetionop4" id="image_of_questionop4">
+                            <!-- &nbsp;<input type="file" accept="image/*" name="image_of_quetionop4" id="image_of_questionop4"> -->
+                            {{form.image_op4}}
                             <div id="uplimgcontaineropi4"><img class="uploadedimageinop4" alt="If uploaded your image will display here"></div>
                         </div>
                     </div>
                     </span>
                     <script>
-                        const upimgop1 = document.querySelector('#image_of_questionop1');
-                        const upimgop2 = document.querySelector('#image_of_questionop2');
-                        const upimgop3 = document.querySelector('#image_of_questionop3');
-                        const upimgop4 = document.querySelector('#image_of_questionop4');
+                        const upimgop1 = document.querySelector('.op1img');
+                        const upimgop2 = document.querySelector('.op2img');
+                        const upimgop3 = document.querySelector('.op3img');
+                        const upimgop4 = document.querySelector('.op4img');
                         var imge1 = "";
                         var imge2 = "";
                         var imge3 = "";

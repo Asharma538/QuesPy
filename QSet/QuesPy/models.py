@@ -21,3 +21,11 @@ class Question(models.Model):
 
     def __str__(self):
         return self.source + " " + self.status
+
+class file_upload(models.Model):
+    ids = models.AutoField(primary_key= True)
+    qnfile = models.FileField(upload_to='')
+    op1file = models.FileField(upload_to='')
+    op2file = models.FileField(upload_to='')
+    op3file = models.FileField(upload_to='')
+    op4file = models.FileField(upload_to='')
