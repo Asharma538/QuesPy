@@ -204,8 +204,10 @@
                     <!-- Submit button for the uploaded question -->
                     <div id="submitquesdiv">
                         <input type="" value="   Submit   " id="submitques" onclick="filled()">
-                        <!-- <button id="submitques" onclick="filled()">Submit</button> -->
                     </div>
+                    <script>
+                        document.getElementsByClassName('.form-control').removeAttribute('required');
+                    </script>
                     <script>
                         var flag=0;
                         function filled(){
