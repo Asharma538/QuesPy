@@ -29,3 +29,5 @@ class file_upload(models.Model):
     op2file = models.FileField(upload_to='')
     op3file = models.FileField(upload_to='')
     op4file = models.FileField(upload_to='')
+    date = models.DateField(default = datetime.date.today)
+    time = models.TimeField(default = datetime.datetime.now())

@@ -31,11 +31,8 @@ def uploadq(request):
             files3 = c_form.cleaned_data['image_op2']
             files4 = c_form.cleaned_data['image_op3']
             files5 = c_form.cleaned_data['image_op4']
-            file_upload(qnfile = files1).save()
-            file_upload(op1file = files2).save()
-            file_upload(op2file = files3).save()
-            file_upload(op3file = files4).save()
-            file_upload(op4file = files5).save()
+            file_upload(qnfile = files1,op1file = files2,op2file = files3,op3file = files4,op4file = files5).save()
+        
 
         question = Question(source = source, status=status,topic=topic,body_q=body_q,image_q=image_q,opt1=opt1,opt2=opt2,opt3=opt3,opt4=opt4,image_of_quetionop1=image_op1,image_of_quetionop2=image_op2,image_of_quetionop3=image_op3,image_of_quetionop4=image_op4,)
         if (source!="" or status!=""):
