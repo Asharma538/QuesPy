@@ -1,0 +1,442 @@
+body{
+    margin: 0px;
+    background-color: rgb(255e, 255, 255);
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #282828;
+    margin: 0px;
+}
+
+header img{
+    padding: 3px;
+    position:relative;
+    float: left;
+    padding-left: 1.5%;
+    margin-top: 10px;
+    width: 40px;
+}
+
+.name{
+    position:relative;
+    float: left;
+    padding-left: 1px;
+    margin-top: 10px;
+    font-family:'Alpha slab one' , cursive;
+    color: #39ca74;
+}
+.py{
+    color: #ffffff;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.2vw;
+}
+
+a:hover{
+    color: #f033f0;
+    transition: 0.5s;
+}
+
+.right{
+    justify-content: right;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    cursor:default;
+}
+.signup:hover,.login:hover{
+    cursor: pointer !important;
+}
+
+.left{
+    padding-top: 25px;
+    padding-left: 2%;
+    display: inline-block;
+    position: relative;
+}
+.left a{
+    font-size: 17px;
+}
+nav button{
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 2px solid rgb(38, 6, 180);
+    width: 60px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+}
+#popup{
+    visibility: hidden;
+}
+.active{
+    visibility: visible !important;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 310px;
+    display: relative;
+    border-top: 6px rgb(27, 138, 217) solid;
+    border-right: 1px rgb(182, 182, 182) solid;
+    border-left: 1px rgb(182, 182, 182) solid;
+    border-bottom: 6px rgb(27, 138, 217) solid;
+    border-radius: 8px;
+}
+.passwordenter{
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 12px;
+}
+.emailenter{
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 12px 12px 15px 12px;
+}
+.loginheading{
+    display: flex;
+    justify-content: center;
+    padding: 30px 3px 30px 3px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 35px;
+    font-family: 'Arvo', serif;
+    font-weight: 600;
+}
+#enemail,#enpwd{
+    width: 220px;
+    height: 28px;
+    margin: 5px;
+    font-size: 15px;
+    font-family: 'Arvo', serif;
+    padding-left: 10px;
+    border: 1px rgb(182, 182, 182) solid;
+    border-radius: 3px;
+    background-color: rgb(249, 249, 249);
+}
+#loginbutton{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Arvo', serif;
+}
+#loginbutton button{
+    width: 70px;
+    height: 25px;
+    font-family: 'Arvo', serif;
+    border: 1px rgb(94, 94, 94) solid;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.newac{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Arvo', serif;
+    font-size: 15px;
+}
+.newac a{
+    text-decoration: none;
+    color: rgb(0, 144, 221);
+}
+
+.starter{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+    margin-top: -16px;
+}
+.name1{
+    /* padding-left: 1px;
+    position:relative;
+    float: left;
+    margin-left: 0.8%;
+    margin-top: 10px;
+    font-family:'Alpha slab one' , cursive;
+    color: #39ca74;
+    font-size: 40px; */
+
+    position:relative;
+    float: left;
+    padding-left: 1px;
+    margin-top: 10px;
+    /* margin : 0px; */
+    font-family:'Alpha slab one' , cursive;
+    color: #39ca74;
+    font-size: 45px;
+}
+
+.py1{
+    color: #ffffff;
+    font-size: 45px;
+}
+
+.logo{
+    width: 55px;
+    padding: 3px ;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+.starter-right{
+    float: right;
+    padding: 5px;
+    margin-top: 30px;
+    position: relative;
+    margin-right: 2%;
+}
+.starter-right a{
+    font-size: 17px;
+}
+
+.features{
+    width: 60%;
+    margin-left: 20%;
+    height: 400px;
+    background-color: #a5e4ed;
+}
+
+.features p{
+    font-family:"Open-Sans" , sans-serif;
+    font-size: 25px;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.box{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: center;
+    width: 900;
+    height: 350px;
+    gap: 0px;
+}
+@media screen and (max-width: 1200px) {
+    .features{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.flex-item{
+    font-size: 20px;
+    font-weight: bold;
+    /* border: 2px solid burlywood; */
+    border-radius: 5px;
+    text-align: center;
+    height: 300px;
+    width: 30%;
+}
+
+.img1{
+    width: 115px;
+    height: 120px;
+}
+
+.box p{
+    font-size: 15px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.img2{
+    width: 130px;
+    height: 120px;
+}
+
+.img3{
+    width: 150px;
+    height: 120px;
+}
+
+.faqs{
+    font-size: 21px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(67, 17, 17);
+    float: right;
+    font-weight: bold;
+    padding-right: 6px;
+    position: relative;
+    
+}
+
+.faq{
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(138, 36, 36);
+    float: right;
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+}
+
+.faq :hover{
+    color: rgb(159, 154, 160);
+    cursor: pointer;
+}
+
+.questions{
+    margin-top: 8px;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #2a7dfa;
+}
+
+.crowdsourcing{
+    width: 30px;
+    height: 30px;
+    padding-right: 2px;
+
+}
+
+.questions button{
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    height: 25px;
+    width: 60px;
+    font-weight: bold;
+    position: relative;
+    background-color: rgb(249, 208, 132);
+    color: rgb(1, 1, 50);
+    border:1px solid rgb(6, 6, 92);
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.hr1{
+    color: rgb(140, 139, 139);
+}
+
+.topic{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: -5px;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(172, 164, 164);
+    padding-top: 10px;
+    color: rgb(43, 3, 89);
+}
+
+#topic{
+    padding-top: 4px;
+    height: 30px;
+    border: 2px solid rgb(3, 3, 119);
+}
+
+.expert-body{
+    height: 580;
+    width: 1200px;
+    margin-left: 150px;
+    background-color: rgb(205, 251, 251);
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 2px solid grey;
+}
+
+.ex-body{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ex-body-1{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ques-body{
+    border: 2px solid black;
+    height: 50px;
+    width: auto;
+}
+
+#boxes{
+    width: 99%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#box-1{
+    width: 99%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.difficulty{
+    height: 210px;
+    width: 1200px;
+    margin-left: 150px;
+    background-color: rgb(89, 183, 114);
+    padding-left: 15px;
+    padding-top: 5px;
+    border: 2px solid grey;
+}
+
+.difficult{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(12, 3, 81);
+}
+
+.radio{
+    font-size: 18px;
+    color: #5b0404;
+}
+
+.approve{
+    height: 60px;
+    width: 1200px;
+    margin-left: 500px;
+    background-color: white;
+    padding-left: 150px;
+    padding-top: 10px;
+    
+}
+.reject{
+    border:1px solid rgb(2, 2, 88);
+    background-color: rgb(71, 161, 194);
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}

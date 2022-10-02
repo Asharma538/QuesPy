@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | QuesPy </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo1.png' %}" alt="">
+        <h1 class="name">Ques<span class="py">Py</span></h1>
+        <nav>
+            <div class="left">
+                <a href="/">Home</a>
+            </div>
+            <div class="left">
+                <a href="uploadq">Upload</a>
+            </div>
+            <div class="left">
+                <a href="#">View</a>
+            </div>
+            <div class="left">
+                <a href="#">About Us</a>
+            </div>
+            <div class="right">
+                {% block login_signup %}
+                {% endblock login_signup %}
+            </div>
+        </nav>
+    </header>
+    <form id="popup" >
+    <div class="container" >
+            <div>
+                <span class="loginheading">
+                    Login
+                </span>
+                <div class="emailenter">
+                    <input type="email" placeholder="Enter your email" id="enemail" required>
+                </div>
+                <div class="passwordenter" >
+                    <input type="password" placeholder="Password" id="enpwd" required>
+                </div>
+            </div>
+            <div id="loginbutton">
+                <button type="button">Login</button>
+            </div>
+            <div class="newac">
+                Don't have an acount? &nbsp; <a href="signup" class="">Sign up</a>
+            </div>
+    </div>
+    </form>
+    <script>
+        function toggle(){
+        var loginbtn = document.getElementById('popup');
+        loginbtn.classList.toggle('active')
+        }
+    </script>
+
+    {% block body %}{% endblock body %}
+</body>
+</html>

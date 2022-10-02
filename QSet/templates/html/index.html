@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock head %}
+
+{% block body %}
+<div class="starter">
+    <img src="{% static 'images/logo1.png' %}" alt="" class="logo">
+    <h1 class="name1">Ques<span class="py1">Py</span></h1>
+    <div class="starter-right">
+        <a href="#">Help</a>
+    </div>
+    <div class="starter-right">
+        <a href="#">About Us</a>
+    </div>
+    <div class="starter-right">
+        <a href="#">Team</a>
+    </div>
+</div>
+
+<div class="features">
+    <p>QuesPy Q&A communities are different. Here's how:</p>
+    <div class="box">
+        <div class="flex-item" id="flex-item-1"><img src="{% static 'images/newexpert1-removebg-preview.png' %}" alt="" class="img1">
+            <br>
+            Expert communities
+            <p class="content">Each of our communities is built by people passionate about a focused topic.</p>
+        </div>
+        <div class="flex-item" id="flex-item-2"><img src="{% static 'images/anonymous-removebg-preview.png' %}" alt="" class="img2">
+            <br>
+            Anonymous User
+            <p class="content">User's privacy is perfectly maintained. They can upload any no. of questions anonymously.</p>
+        </div>
+        <div class="flex-item" id="flex-item-3"><img src="{% static 'images/multiple-subjects.png' %}" alt="" class="img3">
+            <br>
+            Multiple Subjects
+            <p class="content">Question bank for multiple subjects are made available on the single plattform.</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="faq"><a href="#" class="faq">hot</a></div>
+        <div class="faq"><a href="#" class="faq">real-time</a></div>
+        <div class="faqs">FAQs</div>
+    </div>
+    <br>
+    <br>
+    <hr color="#e6e1e1">
+
+    <div class="questions">
+        <!-- <div>
+            <img src="crowdsourcing-challenge-removebg-preview.png" alt="" class="crowdsourcing">
+        </div> -->
+        What are the challenges of crowdsourcing?<br>
+        <br>
+        <a href="#"><button type="button">Google</button></a>
+        <button type="button">Yahoo</button>
+        <button type="button">MSN</button>
+        <button type="button">Ms edge</button>
+        <hr color="#e6e1e1">
+        What is a crowdsourcing survey?<br>
+        <br>
+        <a href="#"><button type="button">Google</button></a>
+        <button type="button">Yahoo</button>
+        <button type="button">MSN</button>
+        <button type="button">Ms edge</button>
+        <hr color="#e6e1e1">
+        What are the major components of crowdsourcing model?<br>
+        <br>
+        <a href="#"><button type="button">Google</button></a>
+        <button type="button">Yahoo</button>
+        <button type="button">MSN</button>
+        <button type="button">Ms edge</button>
+        <hr color="#e6e1e1">
+        How we are maintaining the crowdsourced database?<br>
+        <br>
+        <a href="#"><button type="button">Google</button></a>
+        <button type="button">Yahoo</button>
+        <button type="button">MSN</button>
+        <button type="button">Ms edge</button>
+        <hr color="#e6e1e1">
+    </div>
+</div>
+{% endblock body %}
+
+{% block login_signup %}
+<button class="login" onclick="toggle()">Sign In</button>
+{% endblock login_signup %}

@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    margin: 0px;
+    width: 100%;
+}
+.section1{
+    width: 15%;
+    background-color: rgb(2,1,60);
+    color: aliceblue;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.section2{
+    background-color: rgb(255, 255, 255);
+    padding: 25px 15px 15px 45px;
+    width: 85%;
+}
+.qn_container{
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow:scroll;
+    height: 615px;
+    margin-top: 15px;
+    border: 3px solid;
+    /* border-left: 1px solid; */
+    border-radius: 5px;
+    margin-right: 3%;
+}
+.qn_boxes{
+    width: 85%;
+    height: 55px;
+    background-color: rgb(255, 255, 255);
+    margin: 15px 0px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+}
+#Qp{
+    font-family:'Alpha slab one' , cursive;
+    font-weight: 500;
+}
+#navbtns{
+    color: rgb(255, 31, 109);
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 15px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+
+}
+.pendingqn{
+    border: 1px solid black;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    width: 120px;
+    border-radius: 5px;
+}
+#imgOW{
+    position: absolute;
+    left: 10px;
+    top: 14px;
+}

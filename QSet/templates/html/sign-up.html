@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Sign Up {% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock head %}
+{% block body %}
+<div class="signup_body">
+    <div class="sigup_heading">
+        Ques<span class="signup_py">Py</span>
+    </div>
+    <div class="signup_container">
+        <img class="signup_img" src="/static/images/user.png" alt="user">
+        <h1 class="signup_h1">Sign up</h1>
+        <form>
+            <input type="text" class="signup_input-box" name="firstName" placeholder="First Name" required>
+            <input type="text" class="signup_input-box" name="lastName" placeholder="Last Name" required>
+            <input type="email" class="signup_input-box" name="email" placeholder="Enter valid email" required>
+            <input type="password" class="signup_input-box" name="password" placeholder="Enter strong password" required>
+            <p><span><input type="checkbox" required></span> I agree to all terms and conditions applied</p>
+            <a href="#" class="signup_condition">terms & conditions</a>
+            <input type="submit" class="signup-btn" placeholder="Sign Up">
+        </form>
+        
+    </div>
+</div>
+{% endblock body %}
