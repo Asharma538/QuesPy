@@ -1,0 +1,1 @@
+web gunicorn QSet.wsgi:application --log-file -

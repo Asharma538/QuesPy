@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import dj_database_url
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-ho)q3ab6sw^m+&q-d_fc9n73r*v%opj1#+d=bt0&f0mec@#5u%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*  ']
 
 
 # Application definition
@@ -56,9 +58,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-           BASE_DIR / "templates",
-           BASE_DIR / "templates\css",
-           BASE_DIR / "templates\html",
+        #    BASE_DIR / "templates",
+        #    BASE_DIR / "templates/css",
+           BASE_DIR / "templates/html",
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,6 +126,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = [
+    BASE_DIR / "staticfiles"
+]
 
 MEDIA_URL = '/media/'
 
@@ -133,3 +138,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
